@@ -3,18 +3,17 @@
 #include  <fstream>
 #include  <locale>
 #include  <cstdlib>
-#include  "bst.h"
-#include <string>
 #include <algorithm>
-using namespace  std;
+#include <string>
+#include  "bst.h"
 
-BST<string> makeTree(const char* filename) {
-  BST<string> tree;
-    string str;
-    string value;
-    ifstream in(filename);
+BST<std::string> makeTree(const char* filename) {
+  BST<std::string> tree;
+    std::string str;
+    std::string value;
+    std::ifstream in(filename);
     if (!in) {
-        cout << "File error!" << endl;
+        std::cout << "File error!" << std::endl;
     }
     while (!in.eof()) {
         while (true) {
