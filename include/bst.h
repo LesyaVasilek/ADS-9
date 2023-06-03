@@ -57,8 +57,8 @@ class BST {
     BST() {
         root = nullptr;
     }
-    void addNode_(T value_element) {
-        root = addNode(root, value_element);
+    void adNode_(T value_element) {
+        root = adNode(root, value_element);
     }
     int search(T value_element) {
         return searchNode(root, value_element);
