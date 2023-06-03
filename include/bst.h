@@ -53,18 +53,18 @@ class BST {
         }
     }
 
-       public:
-         BST() {
-             root = nullptr;
-         }
-         int search(T value_element) {
-             return searchNode(root, value_element);
-         }
-         void adNode_(T value_element) {
-             root = adNode(root, value_element);
-         }
-         int depth() {
-             return heightTree(root) - 1;
-         }
+ public:
+  BST() {
+    root = nullptr;
+  }
+  void addNode_(T value_element) {
+    root = addNode(root, value_element);
+  }
+  int search(T value_element) {
+    return searchNode(root, value_element);
+  }
+  int depth() {
+  return heightTree(root) - 1;
+  }
 };
 #endif  // INCLUDE_BST_H_
