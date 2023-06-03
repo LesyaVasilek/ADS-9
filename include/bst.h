@@ -32,28 +32,23 @@ private:
     int searchNode(Node* root, T value_element) {
         if (root == nullptr) {
             return 0;
-        }
-        else if (root->value == value_element) {
+        } else if (root->value == value_element) {
             return root->counter;
-        }
-        else if (root->value < value_element) {
+        } else if (root->value < value_element) {
             return searchNode(root->right, value_element);
-        }
-        else {
+        } else {
             return searchNode(root->left, value_element);
         }
     }
     int heightTree(Node* root) {
         if (root == nullptr) {
             return 0;
-        }
-        else {
+        } else {
             int left1 = heightTree(root->left);
             int right1 = heightTree(root->right);
             if (right1 > left1) {
                 return ++right1;
-            }
-            else {
+            } else {
                 return ++left1;
             }
         }
