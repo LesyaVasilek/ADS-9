@@ -53,7 +53,7 @@ class BST {
         }
     }
 
-     public:
+       public:
          BST() {
              root = nullptr;
          }
