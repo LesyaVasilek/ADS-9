@@ -4,7 +4,27 @@
 #include  <locale>
 #include  <cstdlib>
 #include  "bst.h"
+#include <string>
+#include <algorithm>
+using namespace  std;
 
-BST<std::string> makeTree(const char* filename) {
-  // поместите сюда свой код
+BST<string> makeTree(const char* filename) {
+  BST<string> tree;
+    string str;
+    string value;
+    ifstream in(filename);
+    if (!in) {
+        cout << "File error!" << endl;
+    }
+    while (!in.eof()) {
+        while (true) {
+            char temp = in.get();
+            if ((temp >= 65 && temp <= 90) || (temp >= 97 && temp <= 122)) value += tolower(temp);
+            else
+                break;
+        }
+        tree.adNode_(value);
+        value = "";
+    }
+    return tree;
 }
